@@ -5,10 +5,10 @@ import { KelvinToCelsius } from '@/app/utils/Misc';
 import moment from "moment";
 
 function Temperature() {
-    const { forecast,loading } = useGlobalContext();
+    const { forecast } = useGlobalContext();
     const { main, name, weather, timezone } = forecast;
 
-    if (!forecast) {
+    if (!forecast || !weather) {
         return <div>Loading...</div>;
     }
     
