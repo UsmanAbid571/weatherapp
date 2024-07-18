@@ -11,6 +11,24 @@ function Temperature() {
     const [localTime, setLocalTime] = useState("");
     const [currentDay, setCurrentDay] = useState("")
 
+    useEffect(() => {
+        
+      const interval = setInterval(() => {
+           
+          
+
+        const localMoment = moment().utcOffset(timezone / 60 );
+        
+        const formatedTime = localMoment.format("hh:mm:ss A");
+        
+        const day = localMoment.format("dddd");
+  
+        setLocalTime(formatedTime);
+        setCurrentDay(day);
+      }, 1000);
+      return () => clearInterval(interval);
+    }, [timezone]);
+
     if (!forecast || !weather ) {
         return <div>Loading...</div>;
     }
@@ -40,23 +58,7 @@ function Temperature() {
             return sun;
         }
       };
-    useEffect(() => {
-        
-        const interval = setInterval(() => {
-             
-            
-
-          const localMoment = moment().utcOffset(timezone / 60 );
-          
-          const formatedTime = localMoment.format("hh:mm:ss A");
-          
-          const day = localMoment.format("dddd");
     
-          setLocalTime(formatedTime);
-          setCurrentDay(day);
-        }, 1000);
-        return () => clearInterval(interval);
-      }, [timezone]);
     
     return (
         <div className='border p-5 rounded-lg flex flex-col justify-between dark:bg-zinc-900 shadow-sm dark:shadow-none '>
