@@ -8,13 +8,14 @@ import moment from "moment";
 function Temperature() {
     const { forecast } = useGlobalContext();
     const { main, name, weather, timezone } = forecast;
+    const [localTime, setLocalTime] = useState("");
+    const [currentDay, setCurrentDay] = useState("")
 
     if (!forecast || !weather ) {
         return <div>Loading...</div>;
     }
     
-    const [localTime, setLocalTime] = useState("");
-    const [currentDay, setCurrentDay] = useState("")
+   
 
     const minTemp = KelvinToCelsius(main?.temp_min);
     const maxTemp = KelvinToCelsius(main?.temp_max);
