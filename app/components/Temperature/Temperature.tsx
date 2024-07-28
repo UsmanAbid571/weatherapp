@@ -61,7 +61,7 @@ function Temperature() {
     
     
     return (
-        <div className='border p-5 rounded-lg flex flex-col justify-between dark:bg-zinc-900 shadow-sm dark:shadow-none '>
+        <div className='border p-5 rounded-lg flex flex-col justify-between shadow-sm dark:shadow-none '>
             <p className='flex justify-between items-center'>
                 <span className='font-medium'>{currentDay}</span>
                 <span className='font-medium'>{localTime}</span>

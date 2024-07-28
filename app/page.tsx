@@ -4,6 +4,7 @@ import Pollution from "./components/AirPollution/Pollution";
 import Humidity from "./components/Humidity/Humidity";
 import Sunset from "./components/Sunset/Sunset";
 import Wind from "./components/Wind/Wind"
+import FeelsLike from "./components/FeelsLike/Feels_Like";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             <Humidity/>
             <Sunset/>
             <Wind/>
+            <FeelsLike/>
           </div>
       </div>
     </div>

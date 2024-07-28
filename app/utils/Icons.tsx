@@ -1,4 +1,4 @@
-import { Moon,Sun,Search,Cloud,CloudRain, Snowflake, CloudFog, CloudLightning, Cloudy, CloudDrizzle, Thermometer, Droplets, Sunset, Wind } from "lucide-react";
+import { Moon,Sun,Search,Cloud,CloudRain, Snowflake, CloudFog, CloudLightning, Cloudy, CloudDrizzle, Thermometer, Droplets, Sunset, Wind, CommandIcon } from "lucide-react";
 
 export const sun = <Sun className="h-7 w-7" />
 export const moon = <Moon className="h-7 w-7" />
@@ -14,3 +14,4 @@ export const thermo = <Thermometer className="h-7 w-7" />
 export const droplets = <Droplets className="h-7 w-7" />
 export const sunset = <Sunset className="h-7 w-7" />
 export const wind = <Wind className="h-7 w-7" />
+export const commandIcon = <CommandIcon className="h-7 w-7"/>
