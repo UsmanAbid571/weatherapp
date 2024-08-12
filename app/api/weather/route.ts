@@ -19,3 +19,4 @@ export async function GET(req:NextRequest) {
         console.log("Some Error Occured",error)
     }
 }
+export const revalidate=0;
